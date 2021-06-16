@@ -1,0 +1,50 @@
+.tweetBoxContainer {
+  width: 90%;
+  margin: 40px 20px;
+  height: 100px;
+  border: 1px solid #202227;
+  border-bottom: 10px solid #202227;
+}
+
+.tweetAvatar {
+  display: flex;
+  width: 56px;
+  height: 56px;
+  margin: 2%;
+  margin-left: 3%;
+}
+
+.inputBox {
+  display: flex;
+}
+
+.inputBox .inputBox {
+  flex: 1 0 auto;
+}
+.tweetInput {
+  width: 70%;
+  height: 70px;
+  border: none;
+  margin: 0 2%;
+  font-size: 16px;
+  color: var(--twitter-background);
+  background-color: #000;
+}
+.tweetInput:focus {
+  outline: none !important;
+}
+.tweetBoxButton {
+  padding: 8px 18px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 60px;
+  margin-right: 20px;
+  border-radius: 24px;
+  color: var(--twitter-background);
+  background-color: var(--twitter-color);
+}
+
+.tweetBoxButton:hover {
+  background-color: #157fd1;
+}
