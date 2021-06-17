@@ -50,7 +50,7 @@ const NAVBAR_DATA = [
 const LeftSidebar = () => {
   return (
     <div className="leftSidebarContainer">
-      <header>
+      <header className="leftSideBarHeader">
         <TwitterIcon />
       </header>
       <nav>

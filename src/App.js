@@ -2,7 +2,7 @@ import "./App.css";
 import LeftSidebar from "./views/LeftSidebar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import RightSidebar from "./views/RightSidebar";
-import TweetBox from "./views/TweetBox";
+import AddTweetBox from "./views/AddTweetBox";
 
 function App() {
   return (
@@ -10,7 +10,11 @@ function App() {
       <div className="App">
         <LeftSidebar />
         <Switch>
-          <Route exact path="/" render={() => <TweetBox>Home</TweetBox>} />
+          <Route
+            exact
+            path="/"
+            render={() => <AddTweetBox>Home</AddTweetBox>}
+          />
           <Route
             exact
             path="/explore"

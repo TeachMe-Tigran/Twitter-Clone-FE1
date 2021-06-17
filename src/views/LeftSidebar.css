@@ -5,7 +5,7 @@
   border: 1px solid #202227;
   /* position: fixed; */
 }
-header {
+.leftSideBarHeader {
   height: 30px;
   margin-left: 64px;
   margin-top: 40px;

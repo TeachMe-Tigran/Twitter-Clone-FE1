@@ -1,18 +1,15 @@
-import "./TweetBox.css";
+import "./AddTweetBox.css";
 import Avatar from "@material-ui/core/Avatar";
 import LG from "../assets/images/LG.jpg";
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { addTweetMiddleWare } from "../components/store/actions";
+import { useDispatch } from "react-redux";
+import { addTweet } from "../store/actions";
 
-const TweetBox = () => {
+const AddTweetBox = () => {
   const dispatch = useDispatch();
   const [tweetMessage, setTweetMessage] = useState(``);
-  const state = useSelector((state) => state.tweets);
 
-  console.log(`STATE`, state);
-
-  const addTweet = (e) => {
+  const addTweetHandler = (e) => {
     e.preventDefault();
 
     const tweetData = {
@@ -21,7 +18,7 @@ const TweetBox = () => {
       avatar: LG,
     };
 
-    dispatch(addTweetMiddleWare(tweetData));
+    dispatch(addTweet(tweetData));
     setTweetMessage(``);
   };
 
@@ -38,7 +35,10 @@ const TweetBox = () => {
           onChange={(e) => setTweetMessage(e.target.value)}
         />
         <div>
-          <button className="tweetBoxButton" onClick={(e) => addTweet(e)}>
+          <button
+            className="tweetBoxButton"
+            onClick={(e) => addTweetHandler(e)}
+          >
             Tweet
           </button>
         </div>
@@ -47,4 +47,4 @@ const TweetBox = () => {
   );
 };
 
-export default TweetBox;
+export default AddTweetBox;
