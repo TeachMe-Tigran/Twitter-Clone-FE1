@@ -1,0 +1,79 @@
+.leftSidebarContainer {
+  color: #fff;
+  min-height: 100vh;
+  padding-right: 64px;
+  border: 1px solid #202227;
+  /* position: fixed; */
+}
+.leftSideBarHeader {
+  height: 30px;
+  margin-left: 64px;
+  margin-top: 40px;
+  color: var(--twitter-color);
+}
+
+nav a.active {
+  color: var(--twitter-color); /*not working ! */
+}
+nav {
+  padding-left: 53px;
+}
+
+span svg,
+div svg {
+  margin-right: 15px;
+}
+
+span.navMoreText {
+  padding-left: 11px;
+}
+
+a span,
+.navButtonMore {
+  color: var(--twitter-background);
+  display: flex;
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+  height: 40px;
+  cursor: pointer;
+  padding: 0 11px;
+  align-items: center;
+}
+
+span:hover,
+.navButtonMore:hover {
+  color: var(--twitter-color);
+}
+
+button {
+  background-color: unset;
+  border: none;
+  padding: 0 11px;
+}
+
+button.sidebarTweet {
+  width: 70%;
+  display: flex;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 8px 0px;
+  font-weight: bold;
+  margin-top: 8px;
+  margin-left: 64px;
+  border-radius: 24px;
+  justify-content: center;
+  color: var(--twitter-background);
+  background-color: var(--twitter-color);
+}
+
+button.sidebarTweet:hover {
+  background-color: #157fd1;
+}
+
+@media (max-width: 1250px) {
+  .sidebarNavText,
+  .navMoreText {
+    display: none;
+  }
+}
