@@ -1,7 +1,13 @@
 import "./RightSidebar.css";
-
+import Search from './search/Search'
+import Trends from "./trends/Trends";
 const RightSidebar = () => {
-  return <h1 className="rightSidebarContainer"> RightSidebar</h1>;
+  return (
+    <div className='sidebarContainer'>
+      <Search />
+      <Trends />
+    </div>
+  )
 };
 
 export default RightSidebar;
