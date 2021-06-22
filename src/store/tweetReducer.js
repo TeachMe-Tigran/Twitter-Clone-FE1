@@ -1,6 +1,8 @@
 import * as actions from "./actionTypes";
 
-const initialState = {};
+const initialState = {
+
+};
 
 const tweetReducer = (state = initialState, action) => {
   switch (action.type) {
