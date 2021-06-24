@@ -5,7 +5,7 @@ import RightSidebar from "./views/RightSidebar";
 import AddTweetBox from "./views/AddTweetBox";
 import Profile from "./views/profile/Profile"
 
-function App() {
+function App(props) {
   return (
     <Router>
       <div className="App">
@@ -44,8 +44,7 @@ function App() {
           <Route
             exact
             path="/profile"
-            render={() => <Profile></Profile>}
-            // render={() => <h1 style={{ color: `#fff` }}>Profile</h1>}
+            render={() => <Profile {...props} />}
           />
         </Switch>
         <RightSidebar />

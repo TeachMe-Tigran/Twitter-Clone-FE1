@@ -8,14 +8,7 @@ import { useSelector } from "react-redux";
 
 const Profile = () => {
 
-    const name = useSelector(state => state.profile.name);
-    const nick = useSelector(state => state.profile.nick);
-    const joined = useSelector(state => state.profile.joined);
-    const following = useSelector(state => state.profile.following);
-    const followers = useSelector(state => state.profile.followers);
-    const bgPhoto = useSelector(state => state.profile.bgPhoto);
-    const profilePhoto = useSelector(state => state.profile.profilePhoto);
-    const twitts = useSelector(state => state.profile.twitts);
+    const {name, nick, joined, following, followers, bgPhoto, profilePhoto, twitts} = useSelector(state => state.profile)
 
     return (
         <div className="profile_page">
