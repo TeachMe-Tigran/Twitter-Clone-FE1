@@ -3,8 +3,9 @@ import LeftSidebar from "./views/LeftSidebar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import RightSidebar from "./views/RightSidebar";
 import AddTweetBox from "./views/AddTweetBox";
+import Profile from "./views/profile/Profile"
 
-function App() {
+function App(props) {
   return (
     <Router>
       <div className="App">
@@ -43,7 +44,7 @@ function App() {
           <Route
             exact
             path="/profile"
-            render={() => <h1 style={{ color: `#fff` }}>Profile</h1>}
+            render={(props) => <Profile {...props} />}
           />
         </Switch>
         <RightSidebar />
