@@ -44,7 +44,7 @@ function App(props) {
           <Route
             exact
             path="/profile"
-            render={() => <Profile {...props} />}
+            render={(props) => <Profile {...props} />}
           />
         </Switch>
         <RightSidebar />
