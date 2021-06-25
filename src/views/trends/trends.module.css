@@ -1,0 +1,84 @@
+.trendsContainer {
+    margin: 1rem auto 0;
+    width: 360px;
+    height: auto;
+    background: rgb(21, 24, 28);
+    color: #ddd;
+    border-radius: 15px;
+    position: relative;
+}
+.trendsTitle {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:5px 15px;
+    height: auto;
+    border-bottom: 1px solid #202227;
+}
+.settings{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    color:rgba(29,161,242,1.00)
+}
+
+.trends {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #202227;
+}
+.titleSpan{
+   color:rgb(110, 118, 125);
+   font-size: 13px;
+}
+.dotes {
+    position: relative;
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(21, 24, 28);
+    cursor:pointer;
+}
+.dotes:hover {
+    background: rgba(29,161,242,0.1);
+}
+.dote {
+    width:3px;
+    height:3px;
+    display:block;
+    border-radius: 5px;
+    background-color:rgb(110, 118, 125);
+    position: relative;
+}
+.dote::after {
+    content: '';
+    width:3px;
+    height:3px;
+    border-radius: 50%;
+
+    position: absolute;
+    background-color:rgb(110, 118, 125);
+    left:-5px;
+}
+.dote::before {
+    content: '';
+    width:3px;
+    height:3px;
+    border-radius: 50%;
+    position: absolute;
+    background-color:rgb(110, 118, 125);
+    left:5px;
+}
+.trends > .dotes {
+    margin-top: -6px;
+}
+.show {
+    cursor:pointer;
+    color:rgba(29,161,242,1.00);
+    font-size: 15px;
+}
