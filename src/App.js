@@ -4,17 +4,29 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import RightSidebar from "./views/RightSidebar";
 import AddTweetBox from "./views/AddTweetBox";
 import Profile from "./views/profile/Profile"
+import LandingPage from "./views/landing_page/LandingPage"
+import WrapNavPages from "./views/home/Home"
 
 function App(props) {
   return (
     <Router>
       <div className="App">
-        <LeftSidebar />
+        {/* <LeftSidebar /> */}
         <Switch>
+          {/* <Route
+            exact
+            path="/home"
+            render={() => <AddTweetBox>Home</AddTweetBox>}
+          /> */}
+          <Route
+            exact
+            path="/home"
+            render={() => <WrapNavPages><AddTweetBox/></WrapNavPages>}
+          />
           <Route
             exact
             path="/"
-            render={() => <AddTweetBox>Home</AddTweetBox>}
+            render={() => <LandingPage />}
           />
           <Route
             exact
@@ -47,7 +59,7 @@ function App(props) {
             render={(props) => <Profile {...props} />}
           />
         </Switch>
-        <RightSidebar />
+        {/* <RightSidebar /> */}
       </div>
     </Router>
   );
