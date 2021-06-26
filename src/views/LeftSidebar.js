@@ -1,58 +1,60 @@
 import "./LeftSidebar.css";
 import { NavLink } from "react-router-dom";
-import TwitterIcon from "@material-ui/icons/Twitter";
-import HomeIcon from "@material-ui/icons/Home";
-import SearchIcon from "@material-ui/icons/Search";
-import NotificationsNoneIcon from "@material-ui/icons/NotificationsNone";
-import MailOutlineIcon from "@material-ui/icons/MailOutline";
-import BookmarkBorderIcon from "@material-ui/icons/BookmarkBorder";
-import ListAltIcon from "@material-ui/icons/ListAlt";
-import PermIdentityIcon from "@material-ui/icons/PermIdentity";
-import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
+import {
+  Twitter,
+  Home,
+  Search,
+  NotificationsNone,
+  MailOutline,
+  BookmarkBorder,
+  ListAlt,
+  PermIdentity,
+  MoreHoriz,
+} from "@material-ui/icons";
 
 const NAVBAR_DATA = [
   {
     path: `/`,
     text: `Home`,
-    SVG: { ...HomeIcon },
+    SVG: { ...Home },
   },
   {
-    path: `/explore`,
+    path: `explore`,
     text: `Explore`,
-    SVG: { ...SearchIcon },
+    SVG: { ...Search },
   },
   {
     path: `notifications`,
     text: `Notifications`,
-    SVG: { ...NotificationsNoneIcon },
+    SVG: { ...NotificationsNone },
   },
   {
     path: `messages`,
     text: `Messages`,
-    SVG: { ...MailOutlineIcon },
+    SVG: { ...MailOutline },
   },
   {
     path: `bookmarks`,
     text: `Bookmarks`,
-    SVG: { ...BookmarkBorderIcon },
+    SVG: { ...BookmarkBorder },
   },
   {
     path: `lists`,
     text: `Lists`,
-    SVG: { ...ListAltIcon },
+    SVG: { ...ListAlt },
   },
   {
     path: `profile`,
     text: `Profile`,
-    SVG: { ...PermIdentityIcon },
+    SVG: { ...PermIdentity },
   },
 ];
 const LeftSidebar = () => {
   return (
     <div className="leftSidebarContainer">
-      <header className="leftSideBarHeader">
-        <TwitterIcon />
-      </header>
+      <h4 className="leftSideBarHeader">
+        <Twitter />
+      </h4>
       <nav>
         <>
           {NAVBAR_DATA.map(({ path, text, SVG }, i) => (
@@ -66,7 +68,7 @@ const LeftSidebar = () => {
         </>
 
         <div className="navButtonMore">
-          <MoreHorizIcon />
+          <MoreHoriz />
           <span className="navMoreText"> More</span>
         </div>
       </nav>

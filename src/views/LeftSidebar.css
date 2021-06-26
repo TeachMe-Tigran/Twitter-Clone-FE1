@@ -3,18 +3,18 @@
   min-height: 100vh;
   padding-right: 64px;
   border: 1px solid #202227;
-  /* position: fixed; */
 }
 .leftSideBarHeader {
   height: 30px;
   margin-left: 64px;
-  margin-top: 40px;
+  padding-top: 5%;
   color: var(--twitter-color);
 }
 
 nav a.active {
   color: var(--twitter-color); /*not working ! */
 }
+
 nav {
   padding-left: 53px;
 }

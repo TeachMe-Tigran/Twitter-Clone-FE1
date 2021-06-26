@@ -1,16 +1,35 @@
 import * as actions from "./actionTypes";
 
-const initialState = {};
+const initialState = {
+  tweetPostsState: [],
+  isLoading: false,
+  errorMessage: null,
+};
 
 const tweetReducer = (state = initialState, action) => {
   switch (action.type) {
     case actions.ADD_TWEET: {
-      const { id } = action.data;
       let resetData = {
-        ...state,
-        [id]: action.data,
+        ...action.data,
       };
-      return resetData;
+      return {
+        ...state,
+        tweetPostsState: [...state.tweetPostsState, resetData],
+      };
+    }
+    case actions.FETCH_TWEETS_SUCCESS: {
+      return {
+        ...state,
+        tweetPostsState: [...state.tweetPostsState, ...action.result.data],
+        isLoading: true,
+      };
+    }
+    case actions.FETCH_TWEETS_FAIL: {
+      return {
+        ...state,
+        isLoading: false,
+        errorMessage: alert(action.payload.error),
+      };
     }
     default:
       return state;
