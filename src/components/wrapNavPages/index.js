@@ -1,9 +1,8 @@
+import LeftSidebar from '../leftSidebar'
+import RightSidebar from '../rightSidebar'
+// import AddTweetBox from '../AddTweetBox'
 
-import LeftSidebar from '../LeftSidebar'
-import RightSidebar from '../RightSidebar'
-import AddTweetBox from '../AddTweetBox'
-
-import './home.css'
+import './wrapNavPages.css'
 
 const WrapNavPages = ({children}) => {
     return (

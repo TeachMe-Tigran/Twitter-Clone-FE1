@@ -1,27 +1,19 @@
 import "./App.css";
-import LeftSidebar from "./views/LeftSidebar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import RightSidebar from "./views/RightSidebar";
-import AddTweetBox from "./views/AddTweetBox";
-import Profile from "./views/profile/Profile"
-import LandingPage from "./views/landing_page/LandingPage"
-import WrapNavPages from "./views/home/Home"
+import AddTwittBox from "./components/addTwittBox";
+import Profile from "./components/profile"
+import LandingPage from "./views/landing_page"
+import WrapNavPages from "./components/wrapNavPages"
 
 function App(props) {
   return (
     <Router>
       <div className="App">
-        {/* <LeftSidebar /> */}
         <Switch>
-          {/* <Route
-            exact
-            path="/home"
-            render={() => <AddTweetBox>Home</AddTweetBox>}
-          /> */}
           <Route
             exact
             path="/home"
-            render={() => <WrapNavPages><AddTweetBox/></WrapNavPages>}
+            render={() => <WrapNavPages><AddTwittBox/></WrapNavPages>}
           />
           <Route
             exact
@@ -56,10 +48,10 @@ function App(props) {
           <Route
             exact
             path="/profile"
-            render={(props) => <Profile {...props} />}
+            render={(props) => <WrapNavPages><Profile {...props} /></WrapNavPages>}
+
           />
         </Switch>
-        {/* <RightSidebar /> */}
       </div>
     </Router>
   );

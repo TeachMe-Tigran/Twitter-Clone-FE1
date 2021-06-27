@@ -1,6 +1,7 @@
 
 
 .container{
+    width: 1280px;
     color: aliceblue;
     display: flex;
 }

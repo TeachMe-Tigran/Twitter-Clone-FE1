@@ -1,11 +1,12 @@
-import "./AddTweetBox.css";
+import "./addTweetBox.css";
 import Avatar from "@material-ui/core/Avatar";
-import LG from "../assets/images/LG.jpg";
+import LG from "../../assets/images/LG.jpg";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addTweet } from "../store/actions";
+import { addTweet } from "../../store/actions";
+// import { addTweet } from "../store/actions";
 
-const AddTweetBox = () => {
+const AddTwittBox = () => {
   const dispatch = useDispatch();
   const [tweetMessage, setTweetMessage] = useState(``);
 
@@ -47,4 +48,4 @@ const AddTweetBox = () => {
   );
 };
 
-export default AddTweetBox;
+export default AddTwittBox;

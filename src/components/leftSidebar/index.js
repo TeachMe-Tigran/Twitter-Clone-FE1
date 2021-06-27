@@ -1,4 +1,4 @@
-import "./LeftSidebar.css";
+import "./leftSidebar.css";
 import { NavLink } from "react-router-dom";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import HomeIcon from "@material-ui/icons/Home";
@@ -12,7 +12,7 @@ import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 
 const NAVBAR_DATA = [
   {
-    path: `/`,
+    path: `/home`,
     text: `Home`,
     SVG: { ...HomeIcon },
   },

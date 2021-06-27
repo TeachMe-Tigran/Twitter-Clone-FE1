@@ -1,4 +1,4 @@
-import "./RightSidebar.css";
+import "./rightSidebar.css";
 
 const RightSidebar = () => {
   return <h1 className="rightSidebarContainer"> RightSidebar</h1>;
