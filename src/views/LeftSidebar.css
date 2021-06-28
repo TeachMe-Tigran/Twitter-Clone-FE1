@@ -3,7 +3,11 @@
   min-height: 100vh;
   padding-right: 64px;
   border: 1px solid #202227;
-  /* position: fixed; */
+  position: relative;
+}
+.fixedMenu {
+  position: fixed;
+
 }
 .leftSideBarHeader {
   height: 30px;

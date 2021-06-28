@@ -1,0 +1,18 @@
+.followersContainer {
+    margin: 1rem auto 0;
+    width: 360px;
+    height: auto;
+    background: rgb(21, 24, 28);
+    color: #ddd;
+    border-radius: 15px;
+    position: relative;
+   
+}
+.followersTitle {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:5px 15px;
+    height: auto;
+    border-bottom: 1px solid #202227;
+}
