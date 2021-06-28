@@ -3,8 +3,9 @@ import LeftSidebar from "./views/LeftSidebar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import RightSidebar from "./views/RightSidebar";
 import Home from "./views/Home";
+import Profile from "./views/profile/Profile";
 
-function App() {
+function App(props) {
   return (
     <Router>
       <div className="App">
@@ -15,7 +16,27 @@ function App() {
           <Route
             exact
             path="/notifications"
-            render={() => <h4>Notifications</h4>}
+            render={() => <h1 style={{ color: `#fff` }}>Notifications</h1>}
+          />
+          <Route
+            exact
+            path="/messages"
+            render={() => <h1 style={{ color: `#fff` }}>Messages</h1>}
+          />
+          <Route
+            exact
+            path="/bookmarks"
+            render={() => <h1 style={{ color: `#fff` }}>Bookmarks</h1>}
+          />
+          <Route
+            exact
+            path="/lists"
+            render={() => <h1 style={{ color: `#fff` }}>Lists</h1>}
+          />
+          <Route
+            exact
+            path="/profile"
+            render={(props) => <Profile {...props} />}
           />
           <Route exact path="/messages" render={() => <h4>Messages</h4>} />
           <Route exact path="/bookmarks" render={() => <h4>Bookmarks</h4>} />

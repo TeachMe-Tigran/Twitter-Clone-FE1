@@ -1,0 +1,161 @@
+.profile_page{
+    width: 598px;
+    color: white;
+    height: 1000px;
+}
+
+.header_container{
+}
+
+.profile_pic_box{
+    width: 132.5px;
+    height: 132.5px;
+    background-color: yellow;
+    position: relative;
+    right: -12px;
+    top: 128px;
+    border-radius: 71px;
+    border: solid 4px black; 
+    display: inline-block;
+}
+
+.profile_pic{
+    widows: 100%;
+    height: 100%;
+    border-radius: inherit;
+}
+
+.header{
+    width: 598px;
+    height: 53px;
+    position: relative;
+}
+
+.header_header{
+    width: 566px;
+    height: 53px;
+    padding: 0 16px 0;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    background-color: black;
+
+}
+
+.header_back_arrow{
+    width: 53px;
+
+}
+
+.arrow_back{
+    color: rgba(29,161,242,1.00);
+}
+
+.header_data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header_name{
+    color: rgb(217, 217, 217);
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.header_tweets{
+    font-size: 13px;
+    font-weight: 400;
+    color: rgb(110, 118, 125);
+}
+
+.header_photo{
+    width: 598px;
+    height: 199.328px;
+    background-color: teal;
+}
+
+.profile_edit{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.profile_setup_button{
+    width: 135px;
+    height: 38px;
+    border: rgba(29,161,242,1.00) solid 1px;
+    color: rgba(29,161,242,1.00);
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 900;
+    border-radius: 20px;
+    margin-top: 12px;
+    margin-right: 15px;
+
+}
+
+.bgPhotoBox{
+    width: 100%;
+    height: 100%;
+
+}
+
+.profile_main{
+    margin-left: 3px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    right: -12px;
+    top: 20px;
+    color: rgb(110, 118, 125);
+
+}
+
+.profile_name{
+    color: rgb(217, 217, 217);
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 24px;
+}
+
+.profile_nickName{
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 3px;
+
+}
+
+.profile_joined{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.date_icon > svg {
+    margin-right: 3px;
+}
+
+.profile_follow{
+    display: flex;
+    margin-top: 10px;
+}
+
+.profile_followers{
+    margin-left: 20px;
+}
+
+.followers_count{
+    color: rgb(217, 217, 217);
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.header_footer{
+    position: relative;
+    top: 40px;
+    width: 598px;
+    height: 53px;
+    background: green;
+    text-align: center;
+}
