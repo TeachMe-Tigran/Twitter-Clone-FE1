@@ -9,7 +9,7 @@ const AddTweetBox = () => {
   const dispatch = useDispatch();
   const [tweetMessage, setTweetMessage] = useState(``);
 
-  const addTweetHandler = async (e) => {
+  const addTweetHandler = (e) => {
     e.preventDefault();
 
     const tweetData = {
