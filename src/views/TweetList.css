@@ -1,0 +1,10 @@
+.tweetListContainer {
+  min-width: fit-content;
+  height: 500px;
+  overflow-y: auto;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.tweetListContainer::-webkit-scrollbar {
+  display: none;
+}

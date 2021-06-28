@@ -5,12 +5,17 @@
   --twitter-color: #55acee;
   --twitter-background: #e6ecf0;
 }
-
+h4 {
+  color: #fff;
+  justify-content: center;
+  padding: 1%;
+  padding-top: 2.5%;
+}
 .App {
   background-color: #000;
   height: 100vh;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Ubuntu, "Helvetica Neue", sans-serif;
   display: grid;
-  grid-template-columns: 1.3fr 4fr 1.8fr;
+  grid-template-columns: 1.3fr 3fr 1.8fr;
 }
