@@ -6,6 +6,7 @@
     color: #ddd;
     border-radius: 15px;
     position: relative;
+    overflow: hidden;
 }
 .trendsTitle {
     display:flex;
@@ -28,6 +29,15 @@
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #202227;
+    transition: 0.2s ease-in;
+    cursor: pointer;
+}
+.trends:hover {
+   background: rgba(110, 118, 125,0.1);
+   transition: 0.2s ease-in;
+}
+.trends:last-child {
+    border:none
 }
 .titleSpan{
    color:rgb(110, 118, 125);
@@ -81,4 +91,10 @@
     cursor:pointer;
     color:rgba(29,161,242,1.00);
     font-size: 15px;
+}
+.modalContainer {
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%)
 }

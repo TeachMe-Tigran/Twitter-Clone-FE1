@@ -1,9 +1,15 @@
 .leftSidebarContainer {
   color: #fff;
   min-height: 100vh;
+  width:250px;
   padding-right: 64px;
   border: 1px solid #202227;
   position: relative;
+}
+.fixed {
+ 
+  max-height: 100vh;
+  position: fixed;
 }
 .fixedMenu {
   position: fixed;

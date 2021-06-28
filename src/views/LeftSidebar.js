@@ -50,6 +50,7 @@ const NAVBAR_DATA = [
 const LeftSidebar = () => {
   return (
     <div className="leftSidebarContainer">
+      <div className='fixed'>
       <header className="leftSideBarHeader">
         <TwitterIcon />
       </header>
@@ -71,6 +72,7 @@ const LeftSidebar = () => {
         </div>
       </nav>
       <button className="sidebarTweet">Tweet</button>
+      </div>
     </div>
   );
 };

@@ -1,0 +1,8 @@
+.settingModalContainer {
+    max-width:50vw;
+    height:auto;
+    background: #000;
+}
+.settingTitle {
+    color:rgb(110, 118, 125);
+}
