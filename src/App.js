@@ -2,8 +2,8 @@ import "./App.css";
 import LeftSidebar from "./views/LeftSidebar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import RightSidebar from "./views/RightSidebar";
-import AddTweetBox from "./views/AddTweetBox";
-import Profile from "./views/profile/Profile"
+import Home from "./views/Home";
+import Profile from "./views/profile/Profile";
 
 function App(props) {
   return (
@@ -11,16 +11,8 @@ function App(props) {
       <div className="App">
         <LeftSidebar />
         <Switch>
-          <Route
-            exact
-            path="/"
-            render={() => <AddTweetBox>Home</AddTweetBox>}
-          />
-          <Route
-            exact
-            path="/explore"
-            render={() => <h1 style={{ color: `#fff` }}>Explore</h1>}
-          />
+          <Route exact path="/" render={() => <Home />} />
+          <Route exact path="/explore" render={() => <h4>Explore</h4>} />
           <Route
             exact
             path="/notifications"
@@ -46,6 +38,10 @@ function App(props) {
             path="/profile"
             render={(props) => <Profile {...props} />}
           />
+          <Route exact path="/messages" render={() => <h4>Messages</h4>} />
+          <Route exact path="/bookmarks" render={() => <h4>Bookmarks</h4>} />
+          <Route exact path="/lists" render={() => <h4>Lists</h4>} />
+          <Route exact path="/profile" render={() => <h4>Profile</h4>} />
         </Switch>
         <RightSidebar />
       </div>

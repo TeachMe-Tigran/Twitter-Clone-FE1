@@ -1,0 +1,9 @@
+.retweet g:hover {
+  fill: #1ce376;
+  cursor: pointer;
+}
+
+.analytics g:hover {
+  fill: var(--twitter-color);
+  cursor: pointer;
+}

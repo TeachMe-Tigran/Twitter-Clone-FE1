@@ -1,0 +1,71 @@
+.tweetPostContainer {
+  border-bottom: 1px solid #202227;
+  margin-bottom: 40px;
+}
+
+.tweetPost {
+  color: var(--twitter-background);
+  border-bottom: 1px solid #202227;
+}
+
+.tweetPostHeaderContainer {
+  display: flex;
+}
+
+.tweetPostHeader {
+  display: flex;
+  padding-top: 10px;
+}
+
+.tweetPostHeaderUserName {
+  margin-left: 4px;
+}
+.tweetPostHeaderHour,
+.tweetPostHeaderUserTweetName {
+  color: #596065;
+  margin-left: 4px;
+  margin-top: -4px;
+}
+.tweetPostHeaderMoreIcon {
+  color: #596065;
+  margin-left: 380px;
+  margin-top: -4px;
+}
+
+.tweetPostHeaderDescr {
+  margin-left: 70px;
+  margin-top: -20px;
+}
+
+.tweetPostFooterIcons {
+  margin-top: 13px;
+  display: flex;
+  margin-left: 15px;
+  justify-content: space-between;
+}
+
+.tweetPostFooterIcons svg {
+  color: #596065;
+}
+
+.tweetPostFooterMUIIcon {
+  margin-top: 6px;
+}
+
+.tweetPostFooterChatIcon:hover,
+.tweetPostFooterShare:hover,
+.tweetPostHeaderMoreIcon:hover {
+  color: var(--twitter-color);
+  cursor: pointer;
+}
+
+.tweetPostFooterFavIcon:hover {
+  color: #e0245e;
+  cursor: pointer;
+}
+
+@media (max-width: 1250px) {
+  .tweetPostHeaderUserName {
+    display: none;
+  }
+}
