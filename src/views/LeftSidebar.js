@@ -52,16 +52,20 @@ const NAVBAR_DATA = [
 const LeftSidebar = () => {
   return (
     <div className="leftSidebarContainer">
-<<<<<<< HEAD
+
       <div className='fixed'>
       <header className="leftSideBarHeader">
         <TwitterIcon />
       </header>
-=======
+
       <h4 className="leftSideBarHeader">
         <Twitter />
       </h4>
->>>>>>> b91ae65a66ae72e502218153786f51af835bd135
+
+      <h4 className="leftSideBarHeader">
+        <Twitter />
+      </h4>
+
       <nav>
         <>
           {NAVBAR_DATA.map(({ path, text, SVG }, i) => (
