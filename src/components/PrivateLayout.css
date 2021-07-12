@@ -1,0 +1,4 @@
+.privateLayoutContainer {
+  display: grid;
+  grid-template-columns: 1.3fr 3fr 1.8fr;
+}

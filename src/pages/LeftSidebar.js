@@ -1,7 +1,6 @@
 import "./LeftSidebar.css";
 import { NavLink } from "react-router-dom";
 import {
-  Twitter,
   Home,
   Search,
   NotificationsNone,
@@ -11,10 +10,11 @@ import {
   PermIdentity,
   MoreHoriz,
 } from "@material-ui/icons";
+import TwitterIcon from "../components/TwitterIcon";
 
 const NAVBAR_DATA = [
   {
-    path: `/`,
+    path: `home`,
     text: `Home`,
     SVG: { ...Home },
   },
@@ -52,9 +52,7 @@ const NAVBAR_DATA = [
 const LeftSidebar = () => {
   return (
     <div className="leftSidebarContainer">
-      <h4 className="leftSideBarHeader">
-        <Twitter />
-      </h4>
+      <TwitterIcon className="leftSideBarHeader" />
       <nav>
         <>
           {NAVBAR_DATA.map(({ path, text, SVG }, i) => (

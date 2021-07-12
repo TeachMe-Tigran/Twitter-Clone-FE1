@@ -9,33 +9,45 @@ import HaveSeenAll from "../components/HaveSeenAll";
 
 const TweetList = () => {
   const dispatch = useDispatch();
-  const tweetState = useSelector((state) => state.tweets.tweetPostsState);
+  const { tweetPostsState, error } = useSelector((state) => state.tweets);
   const [hasMore, setHasMore] = useState(true);
 
   useEffect(() => {
-    dispatch(fetchTweets(tweetState.length, 20));
+    if (!tweetPostsState.length) {
+      // do initial fetch
+    }
+  }, [tweetPostsState]);
+
+  useEffect(() => {
+    if (!error) {
+      dispatch(fetchTweets(tweetPostsState.length, 20));
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [error]);
 
   const fetchMoreData = () => {
-    if (tweetState.length >= 50) {
+    if (tweetPostsState.length >= 50) {
       setHasMore(false);
       return;
     }
-    dispatch(fetchTweets(tweetState.length, 10));
+    dispatch(fetchTweets(tweetPostsState.length, 10));
   };
 
   return (
     <div className="tweetListContainer">
-      <InfiniteScroll
-        dataLength={tweetState.length}
-        next={fetchMoreData}
-        hasMore={hasMore}
-        loader={<CircularProgress />}
-        endMessage={<HaveSeenAll />}
-      >
-        <TweetPost tweetState={tweetState} />
-      </InfiniteScroll>
+      {error ? (
+        <p>something went wrong...</p>
+      ) : (
+        <InfiniteScroll
+          dataLength={tweetPostsState.length}
+          next={fetchMoreData}
+          hasMore={hasMore}
+          loader={!error && <CircularProgress />}
+          endMessage={<HaveSeenAll />}
+        >
+          <TweetPost tweetState={tweetPostsState} />
+        </InfiniteScroll>
+      )}
     </div>
   );
 };
