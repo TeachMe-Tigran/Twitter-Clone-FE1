@@ -21,17 +21,19 @@ const TweetPost = ({ tweetState }) => {
             <div className="tweetPostHeaderContainer">
               <MyAvatar src={LG} />
               <div className="tweetPostHeader">
-                <h5 className="tweetPostHeaderUserName">Luchinha Ghalechyan</h5>
-                <div className="tweetPostHeaderUserTweetName">@Luchinha</div>
+                <h5 className="tweetPostHeaderUserName">{tweet.email}</h5>
+                <div className="tweetPostHeaderUserTweetName">
+                  {`@${tweet.handle}`}
+                </div>
                 <div className="tweetPostHeaderHour">
-                  {hour_hourToDayConvertor(tweet.tweetTime)}
+                  {hour_hourToDayConvertor(tweet.created_at)}
                 </div>
                 <div className="tweetPostHeaderMoreIcon">
                   <MoreHorizOutlined />
                 </div>
               </div>
             </div>
-            <div className="tweetPostHeaderDescr">{tweet.tweetMessage}</div>
+            <div className="tweetPostHeaderDescr">{tweet.tweet_message}</div>
             <div className="tweetPostFooterIcons">
               <ChatBubbleOutline
                 fontSize="small"

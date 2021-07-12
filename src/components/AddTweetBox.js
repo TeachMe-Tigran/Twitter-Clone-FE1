@@ -13,9 +13,7 @@ const AddTweetBox = () => {
     e.preventDefault();
 
     const tweetData = {
-      id: Math.random().toFixed(3),
       tweetMessage,
-      tweetTime: new Date().getTime(),
     };
 
     dispatch(addTweet(tweetData));
